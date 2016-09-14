@@ -52,7 +52,7 @@ module.exports = function(options, repo, params, id, reportTiles, reportFont) {
         query = '?key=' + req.query.key;
       }
       return url.replace(
-          'local://', req.protocol + '://' + req.headers.host + '/') + query;
+          'local://', 'https://' + req.headers.host + '/') + query;
     };
 
     var styleJSON_ = clone(styleJSON);
